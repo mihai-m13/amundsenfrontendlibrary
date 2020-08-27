@@ -54,7 +54,8 @@ const config: webpack.Configuration = {
   output: {
     publicPath: '/static/dist/',
     path: PATHS.dist,
-    filename: '[name].[contenthash].js',
+    // filename: '[name].[contenthash].js',
+    filename: '[name].js',
   },
   devtool: 'source-map',
   resolve: {
@@ -100,6 +101,10 @@ const config: webpack.Configuration = {
   plugins: [
     new CleanWebpackPlugin(),
     new MomentLocalesPlugin(), // To strip all locales except “en”
+    new MiniCssExtractPlugin(),
+    /*new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+    }),*/
     ...htmlWebpackPluginConfig,
   ],
   optimization: {

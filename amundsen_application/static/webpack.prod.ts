@@ -1,4 +1,4 @@
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+// import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import merge from 'webpack-merge';
 import TerserPlugin from 'terser-webpack-plugin';
 import commonConfig from './webpack.common';
@@ -15,9 +15,9 @@ export default merge(commonConfig, {
       }),
     ],
   },
-  plugins: [
+  /*plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),
-  ],
+  ],*/
 });
